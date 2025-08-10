@@ -55,3 +55,7 @@ selector-finder*.png
 
 # Java/SDKMAN
 .sdkman/
+
+# Claude Code files
+.claude/
+CLAUDE.md
