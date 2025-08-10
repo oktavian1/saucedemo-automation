@@ -1,0 +1,35 @@
+{
+  "name": "saucedemo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env HEADLESS=true npx playwright test",
+    "test:headed": "cross-env HEADLESS=false npx playwright test",
+    "test:debug": "cross-env HEADLESS=false npx playwright test --debug",
+    "test:ui": "npx playwright test --ui",
+    "test:login": "npx playwright test login.spec.js",
+    "test:inventory": "npx playwright test inventory.spec.js",
+    "test:cart": "npx playwright test cart.spec.js",
+    "test:checkout": "npx playwright test checkout.spec.js",
+    "test:multiple-items": "npx playwright test multiple-items-checkout.spec.js",
+    "test:pagination": "npx playwright test pagination.spec.js",
+    "test:smoke": "npx playwright test --grep @smoke",
+    "test:regression": "npx playwright test",
+    "report": "npx playwright show-report",
+    "allure:generate": "allure generate allure-results --clean",
+    "allure:open": "allure open allure-report",
+    "allure:serve": "allure serve allure-results"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.54.2",
+    "allure-commandline": "^2.34.1",
+    "allure-playwright": "^3.3.3",
+    "cross-env": "^10.0.0",
+    "dotenv": "^17.2.1",
+    "playwright": "^1.54.2"
+  }
+}
